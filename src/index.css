@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *:after, *::before{
+    box-sizing: inherit;
+}
+
+input[type ="text"]{
+    border: thin solid #dedede;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+}
+
+input:focus{
+    border: thin solid #9a9a9a;
+}
+
+button, input[type ="submit"], input[type ="reset"]{
+    border: thin solid #444;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 0 0;
+    display: inline-block;
+    background-color: #eee;
+    color: #444;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.edit{
+    background-color: #22dd66;
+    color: #222;
+    border:none;
+}
+
+.edit:hover{
+    background-color: #22ff77;
+}
+
+.delete{
+    background-color: #dd2222;
+    color: #222;
+    border:none;
+}
+
+.delete:hover{
+    background-color: #ff2222;
+}
+
+form{
+    margin-bottom: 1rem;
+}
+
+hr{
+    margin: 2rem auto;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    text-align: left;
+    padding: .5rem;
+    border-bottom: thin solid #dedede;
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-1-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;  
+      align-items: start;
+      gap: 2rem;
+    }
 }
